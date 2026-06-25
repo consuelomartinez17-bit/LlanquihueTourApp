@@ -40,3 +40,43 @@ nombre,rut,telefono,numeroVivienda,calle,ciudad,region,cargo,jornada,turno
 ## Autora
 
 Consuelo — Desarrollo Orientado a Objetos I, Duoc UC.
+
+
+## Semana 6: Jerarquía de Servicios Turísticos
+
+### Objetivo de esta semana
+Diseñar e implementar una jerarquía de clases con herencia simple para
+representar los distintos servicios turísticos que ofrece la agencia
+Llanquihue Tour (rutas gastronómicas, paseos lacustres y excursiones
+culturales), aplicando atributos heredados, composición y sobreescritura
+de métodos (`toString()`).
+
+Esta funcionalidad es independiente de la entregada en Semana 5
+(gestión de empleados y clientes) y no modifica las clases existentes.
+
+### Clases creadas
+
+* **model**
+  * `ServicioTuristico`: clase base con los atributos comunes
+    (nombre, duración en horas).
+  * `RutaGastronomica`: extiende `ServicioTuristico`, agrega un listado
+    de paradas gastronómicas.
+  * `PaseoLacustre`: extiende `ServicioTuristico`, agrega el tipo de
+    embarcación utilizada.
+  * `ExcursionCultural`: extiende `ServicioTuristico`, agrega el lugar
+    histórico a visitar.
+* **data**
+  * `GestorServicios`: crea las instancias de prueba de cada subclase
+    y las reúne en una lista de tipo `ServicioTuristico`.
+* **ui**
+  * `Main`: ejecuta el programa, obtiene los servicios desde
+    `GestorServicios` y los muestra por consola mediante polimorfismo.
+
+### Cómo ejecutar Main (Semana 6)
+
+1. Clona o descarga este repositorio.
+2. Abre el proyecto en IntelliJ IDEA.
+3. Ejecuta la clase `Main` ubicada en el paquete `ui`.
+4. La consola mostrará el listado completo de servicios turísticos
+   (rutas gastronómicas, paseos lacustres y excursiones culturales)
+   con sus datos correspondientes.
