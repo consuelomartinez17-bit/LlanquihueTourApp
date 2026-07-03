@@ -46,6 +46,17 @@ public class RutaGastronomica extends ServicioTuristico {
     }
 
     /**
+     * Muestra la información completa de la ruta gastronómica,
+     * incluyendo nombre, duración, número de paradas y lista de paradas.
+     */
+    @Override
+    public void mostrarInformacion() {
+        super.mostrarInformacion();
+        System.out.println("Número de paradas: " + getNumeroDeParadas());
+        System.out.println("Paradas: " + paradas);
+    }
+
+    /**
      * Muestra los datos de la ruta gastronómica con sus respectivas paradas.
      * @return String con los datos de la ruta gastronómica.
      * */

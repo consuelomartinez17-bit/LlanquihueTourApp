@@ -33,6 +33,18 @@ public class ExcursionCultural extends ServicioTuristico{
      * */
     public String getLugarHistorico() {
         return lugarHistorico;
+
+
+    }
+
+    /**
+     * Muestra la información completa de ñ la excursión cultural,
+     * incluyendo nombre, duración, el lugar Historico a visitar.
+     */
+    @Override
+    public void mostrarInformacion() {
+        super.mostrarInformacion();
+        System.out.println("Lugar histórico: " + getLugarHistorico());
     }
 
     /**

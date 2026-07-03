@@ -80,3 +80,31 @@ Esta funcionalidad es independiente de la entregada en Semana 5
 4. La consola mostrará el listado completo de servicios turísticos
    (rutas gastronómicas, paseos lacustres y excursiones culturales)
    con sus datos correspondientes.
+
+## Semana 7: Aplicando polimorfismo y colecciones genéricas
+
+### Objetivo de esta semana
+Extender la jerarquía de clases diseñada en Semana 6, incorporando el método
+`mostrarInformacion()` en la superclase `ServicioTuristico` y sobrescribiéndolo
+en cada subclase (`RutaGastronomica`, `PaseoLacustre`, `ExcursionCultural`).
+Se aplicó polimorfismo dinámico recorriendo una colección `List<ServicioTuristico>`
+desde `Main`, invocando el comportamiento específico de cada tipo de servicio
+sin usar `instanceof`.
+
+### Cambios realizados
+* **model**
+  * `ServicioTuristico`: se agregó el método `mostrarInformacion()` con
+    implementación base.
+  * `RutaGastronomica`, `PaseoLacustre`, `ExcursionCultural`: se sobrescribió
+    `mostrarInformacion()` con `@Override` en cada subclase.
+* **ui**
+  * `Main`: se actualizó el recorrido `for-each` para invocar
+    `mostrarInformacion()` desde referencias de tipo `ServicioTuristico`.
+
+### Cómo ejecutar Main (Semana 7)
+
+1. Clona o descarga este repositorio.
+2. Abre el proyecto en IntelliJ IDEA.
+3. Ejecuta la clase `Main` ubicada en el paquete `ui`.
+4. La consola mostrará el listado completo de servicios turísticos
+   con la información específica de cada tipo, aplicando polimorfismo.

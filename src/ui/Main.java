@@ -16,7 +16,7 @@ public class Main {
         System.out.println("========================================\n");
 
         for (ServicioTuristico servicio : servicios) {
-            System.out.println(servicio);
+            servicio.mostrarInformacion();
             System.out.println("----------------------------------------");
         }
 

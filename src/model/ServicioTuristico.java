@@ -46,6 +46,18 @@ public class ServicioTuristico {
     }
 
     /**
+     * Muestra la información del servicio turístico por consola.
+     * Las subclases deben sobrescribir este método para mostrar
+     * su información específica.
+     * */
+    public void mostrarInformacion() {
+        System.out.println("Servicio Turístico" +
+                "\nNombre: " + nombre +
+                "\nDuración: " + duracionHoras + " hrs");
+    }
+
+
+    /**
      * Muestra los datos del servicio turístico con su duración.
      * @return String con los datos del servicio turístico.
      * */

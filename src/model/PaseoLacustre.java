@@ -35,6 +35,18 @@ public class PaseoLacustre extends ServicioTuristico {
     }
 
     /**
+     * Muestra la información completa del paseo lacustre,
+     * incluyendo nombre, duración, tipo de embarcación.
+     */
+    @Override
+    public void mostrarInformacion() {
+        super.mostrarInformacion();
+        System.out.println("Tipo de embarcación: " + getTipoEmbarcacion());
+    }
+
+
+
+    /**
      * Representa el paseo lacustre como texto,
      * mostrando su nombre, duración y tipo de embarcación.
      *
