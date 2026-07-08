@@ -1,6 +1,13 @@
 # LlanquihueTourApp
 
-## Descripción
+> ⚠️ **Punto de entrada oficial (versión actual):** `ui/Main.java`
+> El paquete `app/` corresponde a un módulo independiente de la Semana 5 
+> (gestión de empleados) que se mantiene en el repo como historial de 
+> desarrollo, pero no es el sistema vigente que se evalúa desde la Semana 6 en adelante.
+
+## Módulo histórico: Gestión de Empleados (Semana 5)
+
+### Descripción
 
 Aplicación de consola en Java desarrollada para Llanquihue Tour, agencia de turismo de la Región de Los Lagos. El sistema permite registrar y gestionar a las personas vinculadas a la operación de la agencia (guías, operadores y proveedores, modelados como `Empleado`) y a los clientes que solicitan servicios turísticos.
 
@@ -36,6 +43,8 @@ nombre,rut,telefono,numeroVivienda,calle,ciudad,region,cargo,jornada,turno
 3. Verifica que la carpeta `data/` esté ubicada en la raíz del proyecto (al mismo nivel que `src/`).
 4. Ejecuta la clase `Main` (ubicada en el paquete `app`).
 5. Usa el menú por consola para mostrar todos los empleados, buscar por nombre o filtrar por cargo.
+
+*(Nota: este módulo se conserva por trazabilidad, pero no es el punto de entrada del sistema actual — ver módulo vigente más abajo.)*
 
 ## Autora
 
