@@ -117,3 +117,45 @@ sin usar `instanceof`.
 3. Ejecuta la clase `Main` ubicada en el paquete `ui`.
 4. La consola mostrará el listado completo de servicios turísticos
    con la información específica de cada tipo, aplicando polimorfismo.
+
+## Semana 8: Integrando interfaces, polimorfismo y estructuras dinámicas
+
+### Objetivo de esta semana
+Ampliar el sistema incorporando una interfaz de comportamiento común (`Registrable`),
+una nueva jerarquía de clases independiente de `ServicioTuristico`, una colección
+genérica que combina ambas jerarquías diferenciándolas mediante `instanceof`, y una
+interfaz gráfica básica (GUI) para el ingreso y visualización de datos.
+
+### Clases e interfaces creadas
+
+* **model**
+  * `Registrable`: interfaz que declara el método `mostrarResumen()`, contrato común
+    para todas las entidades gestionables del sistema.
+  * `RecursoAgencia`: clase base abstracta que implementa `Registrable`, para los
+    recursos operativos de la agencia (distinta de la jerarquía `ServicioTuristico`).
+  * `GuiaTuristico`, `Vehiculo`, `ColaboradorExterno`: extienden `RecursoAgencia`,
+    cada una personaliza `mostrarResumen()` según su tipo.
+  * `ServicioTuristico` y sus subclases (`RutaGastronomica`, `PaseoLacustre`,
+    `ExcursionCultural`): actualizadas para también implementar `Registrable`.
+* **data**
+  * `GestorEntidades`: administra una colección `List<Registrable>` que combina
+    objetos de ambas jerarquías, recorriéndola con `for-each` y diferenciando el
+    tipo real de cada objeto mediante `instanceof`.
+* **ui**
+  * `Main`: simplificado para delegar el control del programa a `MenuGestion`.
+  * `MenuGestion`: controla el menú interactivo mediante `JOptionPane`, permite
+    ingresar guías turísticos, vehículos y colaboradores externos, y muestra el
+    resumen de todas las entidades registradas en una ventana con scroll
+    (`JTextArea` dentro de `JScrollPane`).
+
+### Cómo ejecutar Main (Semana 8)
+
+1. Clona o descarga este repositorio.
+2. Abre el proyecto en IntelliJ IDEA.
+3. Ejecuta la clase `Main` ubicada en el paquete `ui`.
+4. Se abrirá un menú mediante cuadros de diálogo con las opciones:
+   ingresar guía turístico, ingresar vehículo, ingresar colaborador externo,
+   mostrar resumen de todas las entidades, o salir.
+5. Al elegir "Mostrar resumen", se abrirá una ventana con scroll mostrando
+   cada entidad registrada, diferenciada por tipo.
+   
