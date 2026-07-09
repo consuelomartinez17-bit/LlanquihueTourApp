@@ -7,7 +7,7 @@ package model;
  * @author consu
  * @version 1.0.
  * */
-public class PaseoLacustre extends ServicioTuristico {
+public class PaseoLacustre extends ServicioTuristico implements Registrable {
 
     private String tipoEmbarcacion;
 
@@ -34,6 +34,17 @@ public class PaseoLacustre extends ServicioTuristico {
         return tipoEmbarcacion;
     }
 
+
+
+    /**
+     * Muestra un resumen del paseo lacustre.
+     * */
+    @Override
+    public void mostrarResumen() {
+        System.out.println("Paseo lacustre: " + nombre);
+    }
+
+
     /**
      * Muestra la información completa del paseo lacustre,
      * incluyendo nombre, duración, tipo de embarcación.
@@ -43,8 +54,6 @@ public class PaseoLacustre extends ServicioTuristico {
         super.mostrarInformacion();
         System.out.println("Tipo de embarcación: " + getTipoEmbarcacion());
     }
-
-
 
     /**
      * Representa el paseo lacustre como texto,

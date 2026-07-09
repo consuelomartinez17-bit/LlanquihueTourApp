@@ -10,7 +10,7 @@ import java.util.List;
  * @version 1.0.
  * */
 
-public class RutaGastronomica extends ServicioTuristico {
+public class RutaGastronomica extends ServicioTuristico implements Registrable{
 
     private List<String> paradas;
 
@@ -43,6 +43,16 @@ public class RutaGastronomica extends ServicioTuristico {
      * */
     public List<String> getParadas() {
         return paradas;
+    }
+
+
+    /**
+     * Muestra un resumen de la ruta gastronómica.
+     */
+
+    @Override
+    public void mostrarResumen() {
+        System.out.println("Ruta gastronómica: " + nombre);
     }
 
     /**

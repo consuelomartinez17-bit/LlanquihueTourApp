@@ -8,7 +8,7 @@ package model;
  * @version 1.0.
  * */
 
-public class ServicioTuristico {
+public abstract class ServicioTuristico implements Registrable {
 
     protected String nombre;
     protected double duracionHoras;

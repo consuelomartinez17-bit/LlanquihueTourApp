@@ -8,7 +8,7 @@ package model;
  * @version 1.0.
  * */
 
-public class ExcursionCultural extends ServicioTuristico{
+public class ExcursionCultural extends ServicioTuristico implements Registrable{
 
     private String lugarHistorico;
 
@@ -38,7 +38,15 @@ public class ExcursionCultural extends ServicioTuristico{
     }
 
     /**
-     * Muestra la información completa de ñ la excursión cultural,
+     * Muestra un resumen de la Excursion cultural.
+     * */
+    @Override
+    public void mostrarResumen() {
+        System.out.println("Excursión Cultural: " + nombre);
+    }
+
+    /**
+     * Muestra la información completa de la excursión cultural,
      * incluyendo nombre, duración, el lugar Historico a visitar.
      */
     @Override

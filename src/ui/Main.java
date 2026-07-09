@@ -1,24 +1,18 @@
 package ui;
 
-import data.GestorServicios;
-import model.ServicioTuristico;
-import java.util.List;
-
+/**
+ * Clase principal del sistema Llanquihue Tour (módulo vigente).
+ * Su única responsabilidad es iniciar la aplicación delegando
+ * el control del menú a MenuGestion, evitando concentrar la
+ * lógica de interacción directamente en main().
+ *
+ * @author consu
+ * @version 1.0
+ */
 public class Main {
 
     public static void main(String[] args) {
-
-        GestorServicios gestor = new GestorServicios();
-        List<ServicioTuristico> servicios = gestor.crearServicios();
-
-        System.out.println("========================================");
-        System.out.println("  LLANQUIHUE TOUR - Servicios Turísticos");
-        System.out.println("========================================\n");
-
-        for (ServicioTuristico servicio : servicios) {
-            servicio.mostrarInformacion();
-            System.out.println("----------------------------------------");
-        }
-
+        MenuGestion menu = new MenuGestion();
+        menu.iniciar();
     }
 }
